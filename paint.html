@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="paint.css">
+    <title>paint</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tools-area">
+
+            <div class="tools">
+                <div class="eraser">
+                    <i class="fa-solid fa-eraser"></i>
+                    <label>eraser</label>
+                </div>
+
+                <div class="brush active">
+                    <i class="fa-solid fa-paint-brush"></i>
+                    <label>brush</label>
+                </div>
+
+                <div class="color">
+                    <i class="fa-sharp fa-solid fa-palette"></i>
+                    <label>chooes color</label>
+                    <input type="color" id="color-picker">
+                </div>
+                <input type="range" id="brush-width" min="1" max="10">
+            </div>
+
+            <div class="buttons">
+                <button class="save">save</button>
+                <button class="clear">clear</button>
+            </div>
+
+        </div>
+        <div class="draw-area">
+            <canvas></canvas>
+
+
+        </div>
+
+ </div>
+    
+    <script src="paint.js"></script>
+</body>
+</html>
