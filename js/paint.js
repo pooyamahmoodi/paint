@@ -26,6 +26,14 @@ function startDraw () {
     ctx.lineWidth = currentwidth
 }
 
+// function drawing (e) {
+//     if (!is_drawing){
+//         return 
+//     }
+//     ctx.lineTo(e.offsetX,e.offsetY)
+//     ctx.strokeStyle = `${currentcolor}`
+//     ctx.stroke()
+// }
 function drawing(e) {
     if (!is_drawing) {
         return;
