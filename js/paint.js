@@ -40,8 +40,14 @@ function endDraw () {
 
 
 canvas.addEventListener("mousedown",startDraw)
+canvas.addEventListener("touchstart",startDraw)
+
 canvas.addEventListener("mousemove",drawing)
+canvas.addEventListener("touchmove",drawing)
+
 canvas.addEventListener("mouseup",endDraw)
+canvas.addEventListener("touchend",endDraw)
+
 
 
 brushwidth.addEventListener("change",() => {
