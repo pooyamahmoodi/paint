@@ -26,17 +26,31 @@ function startDraw () {
     ctx.lineWidth = currentwidth
 }
 
-function drawing (e) {
-    if (!is_drawing){
-        return 
+function drawing(e) {
+    if (!is_drawing) {
+        return;
     }
-    ctx.lineTo(e.offsetX,e.offsetY)
-    ctx.strokeStyle = `${currentcolor}`
-    ctx.stroke()
+
+    let x, y;
+    if (e.touches) { // در صورتی که لمسی باشد
+        const touch = e.touches[0]; // دریافت اولین لمسه
+        x = touch.clientX - canvas.offsetLeft;
+        y = touch.clientY - canvas.offsetTop;
+    } else { // در صورتی که ماوس باشد
+        x = e.offsetX;
+        y = e.offsetY;
+    }
+
+    ctx.lineTo(x, y);
+    ctx.strokeStyle = `${currentcolor}`;
+    ctx.stroke();
 }
+
 function endDraw () {
     is_drawing = false
 }
+
+
 
 
 canvas.addEventListener("mousedown",startDraw)
